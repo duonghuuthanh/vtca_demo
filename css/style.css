@@ -1,0 +1,212 @@
+* {
+    font-family:Tahoma;
+}
+
+/* CSS HEADER */
+header {
+    background:linear-gradient(to right, darkblue, blue, lightblue);
+    color:white;
+    display:flex;
+}
+
+header img {
+    width:120px;
+}
+
+h1 {
+    text-transform:uppercase;
+    margin:0;
+}
+
+header h1 {
+    animation: doimauchu ease 1s infinite;
+}
+
+@keyframes doimauchu {
+    0% {
+        color:white;
+    }
+
+    25% {
+        color: gold;
+    }
+
+    75% {
+        color:red;
+    }
+}
+
+div.ads {
+    display: flex;
+    text-align:center;
+}
+
+div.ads > div > div {
+    width:100%;
+    border:1px dotted white;
+    height:120px;
+    background-color:rgb(0, 60, 255, 0.4);
+    animation: doimaunen ease-in-out .5s infinite; 
+}
+
+@keyframes doimaunen {
+    from {
+        background-color: blue;
+    }
+    to {
+        background-color: gold;
+    }
+}
+
+div.ads > div {
+    padding:10px;
+    width:25%;
+}
+
+input[type="text"] {
+    width:70%;
+    height:34px;
+}
+
+.l-height {
+    line-height: 120px;
+}
+
+.col5 {
+    width:5%
+}
+
+.col10 {
+    width:10%;
+}
+
+.col20 {
+    width:20%;
+}
+
+.col25 {
+    width:25%;
+}
+
+.col50 {
+    width:50%;
+}
+
+/* CSS NAV */
+nav {
+    background-color:lightblue;
+}
+
+ul {
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+
+nav ul {
+    display:flex;
+}
+
+nav > ul > li {
+    min-width:120px;
+    text-align:center;
+    /*padding:10px 15px;*/
+    border-right:1px solid darkblue;
+}
+
+nav > ul > li:last-child {
+    border-right:none;
+}
+
+ul > li > a {
+    display:block;
+    text-decoration: none;
+    padding:10px 15px;
+}
+
+nav ul > li > a:hover {
+    background-color:darkblue;
+    color:white;
+}
+
+.sub {
+    display:none;
+    position:absolute;
+    background-color:lightblue;
+}
+
+.sub-nav:hover .sub {
+    display: block;
+}
+
+/* CSS CONTENT */
+section.content {
+    display:flex;
+    background-color:#4f9db6;
+    
+}
+
+div.left {
+    width:20%;
+}
+
+div.left > h2 {
+    text-align:center;
+}
+
+div.left ul > li {
+    background: linear-gradient(lightblue, white);
+}
+
+div.left ul > li:hover {
+    background:darkcyan;
+}
+
+div.right {
+    width:80%;
+    display:flex;
+    flex-wrap: wrap;
+    max-height:900px;
+    overflow:auto;
+}
+
+div.item {
+    width:20%;
+    text-align:center;
+    position:relative;
+}
+
+figure img {
+    width:100%;
+    transition:transform ease 2s;
+}
+
+div.item figure img:hover {
+    transform: rotate(20deg);
+}
+
+div.detail {
+    background-color:rgb(0, 0, 0, 0.4);
+     position:absolute;
+    color:gold;
+    top:0;
+    /*left:0;
+    right:0;*/
+    width:0;
+    overflow:hidden;
+    bottom:0;
+    transition: width ease-in-out .25s;
+}
+
+div.item:hover div.detail {
+    width:100%;
+}
+
+section.contact {
+    background-color:rgb(255, 0, 0, 0.4);
+    position:fixed;
+    top:200px;
+    right:0;
+    width:250px;
+    z-index:999;
+}

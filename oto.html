@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ô TÔ</title>
+        <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <style>
+            * {
+                box-sizing:border-box;
+            }
+
+            body {
+                font-family:arial;
+            }
+
+            div.oto {
+                background-color:lightgray;
+                padding: 15px;
+            }
+
+            div.oto > h1 {
+                color:gray;
+                text-align:center;
+                font-size:60px
+            }
+
+            .clearfix {
+                overflow:hidden;
+            }
+
+            div.item {
+                width:25%;
+                padding:20px;
+                text-align:center;
+                float:left;
+            }
+
+            div.item > div {
+                background-color:gray;
+                padding:10px;
+                border-radius:10px;
+            }
+
+            div.item > div img {
+                width:100%;
+            }
+
+            div.lienhe {
+                background-color:black;
+                color:white;
+                padding:10px;
+            }
+
+            div.lienhe > h1 {
+                text-align:center;
+                font-size:50px;
+            }
+
+            div.lienhe > p {
+                text-align:center;
+            }
+
+            div.lienhe ul {
+                list-style-type:none;
+                padding:0;
+            }
+
+            .col25 {
+                width:25%;
+            }
+
+            .col50 {
+                width:50%;
+            }
+
+            .left {
+                float:left;
+            }
+
+            input[type=text] {
+                width:100%;
+                height:34px;
+                padding:3px;
+            }
+
+            input[type=submit] {
+                background-color:orange;
+                color:white; 
+                padding:10px;
+                border:1px solid orange;
+            }
+
+            textarea {
+                width:100%;
+                padding:3px;
+            }
+         </style>
+    </head>
+    <body>
+        <div class="oto">
+            <h1>GIỚI THIỆU HONDA ÔTÔ</h1>
+            <hr width="5%" size="10" color="gray" />
+            <div class="clearfix">
+                <div class="item">
+                    <div>
+                        <img src="images/oto.jpg" alt="OTO" />
+                        <h3>Honda City</h3>
+                        <p>Cùng Honda...</p>
+                    </div>
+                </div>
+                <div class="item"> 
+                    <div>
+                        <img src="images/oto.jpg" alt="OTO" />
+                        <h3>Honda City</h3>
+                        <p>Cùng Honda...</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="images/oto.jpg" alt="OTO" />
+                        <h3>Honda City</h3>
+                        <p>Cùng Honda...</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="images/oto.jpg" alt="OTO" />
+                        <h3>Honda City</h3>
+                        <p>Cùng Honda...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lienhe">
+            <h1>LIÊN HỆ</h1>
+            <hr width="5%" size="3" color="gray" />
+            <p>Nếu bạn có câu hỏi gì vui lòng liên hệ chúng tôi...</p>
+            <div class="clearfix">
+                <div class="col25 left">
+                    <h3>Địa chỉ văn phòng kinh doanh</h3>
+                    <ul>
+                        <li>215 Lê Đại Hành, Q12, ...</li>
+                        <li><i class="fa fa-phone"></i>Phone: 098467122</li>
+                        <li>
+                            <i class="fa fa-envelope"></i> 
+                            Email: <a style="color:gray" href="mailto:contact@gmail.com">contact@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col25 left">
+                    <h3>Giờ làm việc</h3>
+                    <ul>
+                        <li><i class="fa fa-camera"></i> Ngày thường: ...</li>
+                        <li><i class="fa fa-camera"></i> Thứ bảy: ...</li>
+                        <li><i class="fa fa-camera"></i> Chủ nhật: ...</li>
+                    </ul>
+                </div>
+                <div class="col50 left">
+                    <form>
+                    <table width="100%" cellspacing="10">
+                        <tr>
+                            <td width="50%">
+                                <input type="text" placeholder="Your name*" />
+                            </td>
+                            <td width="50%">
+                                <input type="text" placeholder="Your email*" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <textarea rows="5" placeholder="Your message*"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center">
+                                <input type="submit" value="Send Message" />
+                            </td>
+                        </tr>
+                    </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

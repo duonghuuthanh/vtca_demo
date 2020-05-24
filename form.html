@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Demo</title>
+    </head>
+    <body>
+        <form>
+        <table>
+            <tr>
+                <td>Nhập liệu 1 dòng</td>
+                <td>
+                    <input type="text" placeholder="Nhập tên..." required />
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email" placeholder="Nhập email" />
+                </td> 
+            </tr>
+            <tr>
+                <td>Url</td>
+                <td>
+                    <input type="url" placeholder="Nhập url" />
+                </td> 
+            </tr>
+            <tr>
+                <td>Number</td>
+                <td>
+                    <input type="number" placeholder="Nhập số" />
+                </td> 
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>
+                    <input type="date" placeholder="Nhập ngày tháng" />
+                </td> 
+            </tr>
+            <tr>
+                <td>Range</td>
+                <td>
+                    <input type="range" min="1" max="100" />
+                </td> 
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td>
+                    <input type="color" min="1" max="100" />
+                </td> 
+            </tr>
+            <tr>
+                <td>Nhập liệu mật khẩu</td>
+                <td>
+                    <input type="password" required />
+                </td>
+            </tr>
+            <tr>
+                <td>Radio Button</td>
+                <td>
+                    <input type="radio" name="gender" checked /> Nam
+                    <input type="radio" name="gender" /> Nữ
+                </td>
+            </tr>
+            <tr>
+                <td>Checkbox</td>
+                <td>
+                    <input type="checkbox" /> Du lịch
+                    <input type="checkbox" checked /> Lập trình
+                    <input type="checkbox" /> Thể thao
+                    <input type="checkbox" /> Khác
+                </td>
+            </tr>
+            <tr>
+                <td>SelectBox</td>
+                <td>
+                    <select>
+                        <optgroup label="Châu Á">
+                            <option value="vn">Việt Nam</option>
+                            <option value="tl">Thái Lan</option>
+                        </optgroup>
+                        <optgroup label="Châu Mỹ">
+                            <option selected value="hk">Hoa Kỳ</option>
+                            <option value="bz">Brazil</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>ListBox</td>
+                <td>
+                    <select multiple>
+                        <optgroup label="Châu Á">
+                            <option value="vn">Việt Nam</option>
+                            <option value="tl">Thái Lan</option>
+                        </optgroup>
+                        <optgroup label="Châu Mỹ">
+                            <option selected value="hk">Hoa Kỳ</option>
+                            <option value="bz">Brazil</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Textarea</td>
+                <td>
+                    <textarea rows="10" cols="60"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="reset" value="Nhập lại" />
+                    <input type="button" value="Kiểm tra dữ liệu" />
+                    <input type="submit" value="Gửi dữ liệu" />
+                </td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>
