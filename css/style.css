@@ -2,6 +2,17 @@
     font-family:Tahoma;
 }
 
+html, body {
+    margin:0;
+    padding:0;
+}
+
+@font-face {
+    font-family: myFont;
+    src: url(../font/thuphap3.ttf);
+    font-weight:bold;
+}
+
 /* CSS HEADER */
 header {
     background:linear-gradient(to right, darkblue, blue, lightblue);
@@ -14,6 +25,7 @@ header img {
 }
 
 h1 {
+
     text-transform:uppercase;
     margin:0;
 }
@@ -133,6 +145,7 @@ nav ul > li > a:hover {
     display:none;
     position:absolute;
     background-color:lightblue;
+    z-index:999;
 }
 
 .sub-nav:hover .sub {
@@ -209,4 +222,65 @@ section.contact {
     right:0;
     width:250px;
     z-index:999;
+}
+
+@media screen and (max-width:1200px) {
+    div.ads, section.contact {
+        display:none;
+    }
+
+    .col10 {
+        width:20%;
+    }
+
+    .col20 {
+        width:40%;
+    }
+
+    div.item {
+        width:25%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    div.item {
+        width:33.33%;
+    }
+
+    div.controls, div.left {
+        display:none;
+    }
+
+    div.right {
+        width:100%;
+    }
+} 
+
+
+@media screen and (max-width:600px) {
+    nav ul {
+        display:block;
+    }
+
+    .sub {
+        width:100%;
+    }
+
+    div.item {
+        width:100%;
+    }
+
+    .col10 {
+        width:30%;
+    }
+
+    .col20 {
+        width:70%;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    section.content {
+        background-color:blue;
+    }
 }
