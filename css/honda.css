@@ -1,0 +1,180 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* CSS NAV */
+header {
+   display:flex;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style-type:none;
+    padding:0;
+    margin:0;
+    display:flex;
+}
+
+nav ul > li > a {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    padding: 15px 10px;
+}
+
+/* CSS BANNER */
+section.banner {
+    /*animation: doinen ease 6s infinite;*/
+    background-size: 100%;
+    background-repeat: none;
+}
+
+section.banner img {
+    /*visibility: hidden;*/
+    width:100%;
+    top:0;
+    left:0;
+}
+
+/*
+@keyframes doinen {
+    0% {
+        background-image:url(../images/honda/banner/banner1.jpg);
+    }
+    30% {
+        background-image:url(../images/honda/banner/banner2.jpg);
+    }
+    80% {
+        background-image:url(../images/honda/banner/banner3.jpg);
+    }
+}*/
+
+section.subject {
+    background-color:gold;
+    color:white;
+    padding: 20px;
+}
+
+section.subject h1 {
+    font-size: 3vw;
+    text-align:center;
+    text-shadow: 3px 4px 4px red;
+}
+
+/* CSS INTRODUCTION */
+section.introduction {
+    background-color:lightgray;
+    color:gray;
+    text-align:center;
+    padding: 15px 10%;
+}
+
+section.introduction2 {
+    background-color:lightgray;
+}
+
+section.introduction p {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 3vw;
+}
+
+h1.underline::after {
+    content:" ";
+    height: 5px;
+    width: 5%;
+    background-color: gray;
+    display: block;
+    margin: 10px auto;
+}
+
+div.items {
+    display:flex;
+}
+
+div.item {
+    width:25%;
+    padding: 2%;
+}
+
+div.item > div:hover {
+    box-shadow:4px 5px 8px gray;
+}
+
+div.item > div {
+    background-color:beige;
+    padding:20px;
+}
+
+div.item img {
+    max-width:100%;
+}
+
+/* CSS PRODUCT */
+section.product {
+    background-color:lightgray;
+    color:gray;
+    text-align:center;
+    padding:10px;
+}
+
+div.prods {
+    display:flex;
+    flex-wrap:wrap;
+}
+
+div.prod {
+    width: 33.33%;
+}
+
+div.prod img {
+    max-width:100%;
+}
+
+/* CSS STATS */
+section.stats {
+    background-color:black;
+    color: white;
+    display:flex;
+    text-align:center;
+}
+section.stats h1 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+div.stat {
+    width:25%;
+}
+
+/* CSS EVENT */
+section.events {
+    background-color:lightgray;
+    color: gray;
+    text-align:center;
+    padding: 10px;
+}
+
+div.evts {
+    
+    display:flex;
+}
+
+div.evt {
+    padding:10px; 
+    width:25%;
+}
+
+div.evt iframe {
+    width: 100%;
+}
