@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Demo</title>
+        <script>
+            function giaiBac1() {
+                var a = document.getElementById("txtA");
+                var b = document.getElementById("txtB");
+
+                if (a.value == "" || b.value == "") {
+                    a.style.border = "1px solid red";
+                    b.style.border = "1px solid red";
+
+                    return;
+                } else {
+                    a.style.border = "";
+                    b.style.border = "";
+                }
+
+                a = parseFloat(a.value);
+                b = parseFloat(b.value);
+
+                var kq = "";
+                if (a == 0)
+                    if (b == 0)
+                        kq = "VÔ SỐ NGHIỆM";
+                    else
+                        kq = "VÔ NGHIỆM";
+                else
+                    kq = "x = " + (-b/a).toFixed(2);
+
+                //alert(kq);
+                var k = document.getElementById("kqId");
+                k.innerHTML = "<h1>" + kq + "</h1>";
+            }
+
+            function doiTien() {
+                var soTien = parseFloat(document.getElementById("txtSoTien").value);
+                var donVi = document.getElementById("donViId").value;
+
+                var kq;
+                switch (donVi) {
+                    case "usd":
+                        kq = soTien / 23000;
+                        break;
+                    case "aud":
+                        kq = soTien / 18000;
+                        break;
+                    case "eur":
+                        kq = soTien / 26000;
+                        break;
+                }
+
+                var k2 = document.getElementById("kqId2");
+                k2.innerHTML = "<h1>" + soTien + "VNĐ = " + kq.toFixed(2) + donVi.toUpperCase() + "</h1>";
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>a = </td>
+                <td>
+                    <input type="text" placeholder="Nhập a..." id="txtA" />
+                </td>
+            </tr>
+            <tr>
+                <td>b = </td>
+                <td>
+                    <input type="text" placeholder="Nhập b..." id="txtB" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="GIẢI" onclick="giaiBac1();" />
+                </td>
+            </tr>
+        </table>
+        <div id="kqId">
+
+        </div>
+
+        <table>
+            <tr>
+                <td>Số tiền = </td>
+                <td>
+                    <input type="text" placeholder="Nhập số tiền..." id="txtSoTien" />
+                </td>
+                <td>(VNĐ)</td>
+            </tr>
+            <tr>
+                <td>Đơn vị</td>
+                <td>
+                    <select id="donViId">
+                         <option value="usd">USD</option>
+                         <option value="aud">AUD</option>
+                         <option value="eur">EUR</option>
+                    </select>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="button" value="ĐỔI TIỀN" onclick="doiTien();" />
+                </td>
+            </tr>
+        </table>
+        <div id="kqId2"></div>
+    </body>
+</html>
