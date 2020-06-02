@@ -54,9 +54,55 @@
                 var k2 = document.getElementById("kqId2");
                 k2.innerHTML = "<h1>" + soTien + "VNĐ = " + kq.toFixed(2) + donVi.toUpperCase() + "</h1>";
             }
+
+            var timer = null;
+            function play() {
+                var ball = document.getElementById("ballId");
+                var area = document.getElementsByClassName("ball-area")[0];
+                var le = 0, to = 0;
+                var incX = 5, incY = 7;
+
+                timer = setInterval(function() {
+                    if (le + ball.offsetWidth >= area.offsetWidth || le < 0)
+                        incX = -incX;
+
+                    if (to + ball.offsetHeight >= area.offsetHeight || to < 0)
+                        incY = -incY;
+
+                    to += incY;
+                    le += incX;
+
+                    ball.style.left = le + "px";
+                    ball.style.top = to + "px";
+                }, 10);
+            }
+
+            function stop() {
+                if (timer != null)
+                    clearInterval(timer);
+            }
         </script>
+        <style>
+            div.ball-area {
+                width:800px;
+                height:600px;
+                background-color:gray;
+                position: relative;
+            }
+
+            #ballId {
+                position: absolute;
+            }
+        </style>
     </head>
     <body>
+        <div>
+            <input type="button" value="Play" onclick="play()" />
+            <input type="button" value="Stop" onclick="stop()" />
+            <div class="ball-area">
+                <img src="images/ball.png" id="ballId" alt="ball" />
+            </div>
+        </div>
         <table>
             <tr>
                 <td>a = </td>
