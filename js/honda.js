@@ -2,6 +2,7 @@ window.onscroll = function() {
     console.info(document.documentElement.scrollTop);
     var header = document.getElementById("myHeader");
     var gototop = document.getElementById("gototop");
+    console.info(document.documentElement.scrollTop);
     if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
         header.style.position = "fixed";
         header.style.left = 0;
@@ -16,6 +17,12 @@ window.onscroll = function() {
 
         gototop.style.display = "none";
     }
+
+    if (document.documentElement.scrollTop > 900) {
+        this.incNumber();
+        // this.incNumber(document.querySelectorAll(".stat span")[0], 9, 1000);
+        // this.incNumber(document.querySelectorAll(".stat span")[1], 167, 50);
+    }
 }
 
 function init() {
@@ -26,18 +33,46 @@ function init() {
         });
 }
 
-function goToTop() {
-    var timer = setInterval(function() {
-        document.documentElement.scrollTop-=20;
 
-        if (document.documentElement.scrollTop <= 0)
-            clearInterval(timer);
-    }, 5);
-}
 
 function showImage(img) {
     var im = document.getElementById("imgModalid");
     im.src = img.src;
 
     $('#myImageModal').modal();
+}
+
+function incNumber(interval=200) {
+    var timer = setInterval(function() {
+        var objs = document.querySelectorAll(".stats span")
+        for (var i = 0; i < objs.length; i++) {
+            var max = parseInt(objs[i].getAttribute("rel"));
+            var step = parseInt(objs[i].getAttribute("step"));
+            var n = parseInt(objs[i].innerText);
+            n += step;
+
+            if (n > max) {
+                n = max;
+            }
+
+            objs[i].innerText = n;
+        }
+    }, interval);
+}
+
+function common(sTop=0, duration=1000) {
+    $("html, body").animate({
+        scrollTop: sTop
+    }, duration);
+}
+
+function goToTop() {
+    common();
+}
+
+function go(obj) {
+    event.preventDefault();
+    var pos = document.querySelector(obj.getAttribute("href"));
+
+    common(pos.offsetTop);
 }

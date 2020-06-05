@@ -196,3 +196,21 @@ div.gototop a {
 .modal img {
     width:100% !important;
 }
+
+section.social ul {
+    list-style-type: none;
+    position:fixed;
+    left: -90px;
+    width: 120px;
+    top: 20%;
+    background-color: rgb(0, 255, 0, 0.7); 
+    transition: left 1s;
+}
+
+section.social ul:hover {
+    left: 0;
+}
+
+section.social a {
+    font-size: 30px;
+}

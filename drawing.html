@@ -45,9 +45,57 @@
                 border-left: 2px solid black;
                 padding: 10px;
             }
+
+            div.test {
+                height: 200px;
+                width: 300px;
+            }
+
+            div.up {
+                background-color:orange;
+            }
+
+            div.bottom {
+                background-color: gold;
+                position: relative;
+                margin-top:300px;
+            }
+
+            div.bottom::after {
+                content: "";
+                border-width:150px;
+                border-style:solid;
+                border-color: transparent transparent gold gold;
+                position:absolute;
+                left: 0;
+                right:0;
+                bottom:100%;
+              
+            }
+
+            div.up {
+                background-color: green;
+                position:relative;
+            }
+
+            div.up::after {
+                content: "";
+                border-width:150px;
+                border-style:solid;
+                border-color: green green transparent transparent;
+                position:absolute;
+                left: 0;
+                right:0;
+                top:100%;
+            }
         </style>
     </head>
     <body>
+
+        <div>
+            <div class="test up"></div>
+            <div class="test bottom"></div>
+        </div>
         <div class="container">
         <div>
             <div>

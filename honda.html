@@ -7,13 +7,17 @@
               href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
               crossorigin="anonymous">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
         <link href="css/honda.css" rel="stylesheet" />
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script
+              src="https://code.jquery.com/jquery-3.5.1.min.js"
+              integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+              crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="js/honda.js"></script>
     </head>
-    <body class="container-fluid" onload="init()">
+    <body class="container-fluid" data-spy="scroll" data-target=".navbar" onload="init()">
         <div class="gototop" id="gototop">
             <a href="javascript:;" onclick="goToTop()">VỀ ĐẦU TRANG</a>
         </div>
@@ -21,16 +25,23 @@
             <div class="logo">
                 <img src="images/honda/logo1.png" alt="Logo Honda" />
             </div>
-            <nav>
+            <nav class="navbar">
                 <ul>
                     <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Giới thiệu</a></li>
-                    <li><a href="#">Sản phẩm</a></li>
-                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#introduction" onclick="go(this)">Giới thiệu</a></li>
+                    <li><a href="#product" onclick="go(this)">Sản phẩm</a></li>
+                    <li><a href="#news" onclick="go(this)">Tin tức</a></li>
                     <li><a href="#" data-toggle="modal" data-target="#myModal">Liên hệ</a></li>
                 </ul>
             </nav>
         </header>
+
+        <section class="social">
+            <ul>
+                <li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
+                <li><a href="#"><span class="fa fa-twitter-square"></span></a></li>
+            </ul>
+        </section>
 
         <section class="banner">
             <div id="demo" class="carousel slide" data-ride="carousel" data-interval="1000">
@@ -70,7 +81,7 @@
             <h1>TOẢ SÁNG CÔNG NGHỆ VƯỢT TRỘI</h1>
         </section>
             
-        <section class="introduction bg-light">
+        <section id="introduction" class="introduction bg-light">
             <h1 class="underline text-muted">GIỚI THIỆU HONDA Ô TÔ</h1>
             <p>Được thành lập vào năm 1996, công ty Honda Việt Nam là công ty liên doanh giữa 3 đơn vị: Công ty Honda Motor (Nhật Bản), Công ty Asian Honda Motor (Thái Lan), Tổng Công ty Máy Động Lực và Máy Nông nghiệp Việt Nam với 2 ngành sản phẩm chính: xe máy và xe ô tô. Sau hơn 20 năm có mặt tại Việt Nam, Honda Việt Nam đã không ngừng phát triển và trở thành một trong những đơn vị hàng đầu trong lĩnh vực sản xuất xe gắn máy và ô tô uy tín tại thị trường Việt Nam.</p>
             <p>Với hơn 10.000 công nhân viên, Honda Việt Nam tự hào mang đến cho khách hàng những sản phẩm chất lượng cao, dịch vụ tận tâm và những đóng góp vì một xã hội giao thông lành mạnh. Với khẩu hiệu “Sức mạnh của những Ước mơ”, Honda Việt Nam mong muốn được chia sẻ và cùng mọi người thực hiện ước mơ thông qua việc tạo thêm ra nhiều niềm vui mới cho người dân và xã hội Việt Nam.
@@ -110,7 +121,7 @@
             </div>
         </section>
 
-        <section class="product bg-light">
+        <section id="product" class="product bg-light">
             <h1 class="underline">SẢN PHẨM</h1>
             <div class="prods">
                 <div class="prod">
@@ -136,24 +147,24 @@
 
         <section class="stats">
             <div class="stat">
-                <h1>&gt; 9</h1>
+                <h1>&gt; <span rel="9" step="1">0</span></h1>
                 <h4>TỈNH THÀNH</h4>
             </div>
             <div class="stat">
-                <h1>&gt; 167</h1>
+                <h1>&gt; <span rel="167" step="20">0</span></h1>
                 <h4>ĐẠI LÝ CẢ NƯỚC</h4>
             </div>
             <div class="stat">
-                <h1>&gt; 100</h1>
+                <h1>&gt; <span rel="100" step="10">0</span></h1>
                 <h4>SẢN PHẨM BÁN CHẠY</h4>
             </div>
             <div class="stat">
-                <h1>&gt; 200</h1>
+                <h1>&gt; <span rel="200" step="20">0</span></h1>
                 <h4>KHÁCH HÀNG ĐĂNG KÝ LÁI THỬ</h4>
             </div>
         </section>
 
-        <section class="events bg-light">
+        <section id="news" class="events bg-light">
             <h1 class="underline">SỰ KIỆN</h1>
             <div class="evts">
                 <div class="evt">
