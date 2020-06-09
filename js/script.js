@@ -1,6 +1,7 @@
 
 
 function showShape(shapeId) {
+    // them validte
     if (shapeId == null || shapeId == undefined)
         return;
     // Ẩn tất cả các hình
