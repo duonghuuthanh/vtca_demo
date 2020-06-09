@@ -1,7 +1,7 @@
 
 
 function showShape(shapeId) {
-    if (shapeId == null)
+    if (shapeId == null || shapeId == undefined)
         return;
     // Ẩn tất cả các hình
     var shapes = document.querySelectorAll(".shapes > div");
